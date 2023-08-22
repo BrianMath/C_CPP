@@ -1,3 +1,0 @@
-2 5
-A A A A A
-A A D E F

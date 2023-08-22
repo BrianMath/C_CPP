@@ -2,50 +2,6 @@
 #include <stdarg.h>
 #include <string.h>
 
-
-/**
- * @brief Soma uma quantidade indefinida de inteiros
- * 
- * @param cont Quantidade de argumentos que serão recebidos
- * @param ... Lista indefinida de inteiros
- * @return int - A soma dos números recebidos
- */
-int sum(int cont, ...) {
-	// Lista de argumentos passados
-	va_list args;
-	// Inicializa a lista de argumentos após o argumento 'cont'
-	va_start(args, cont);
-
-	int soma = 0;
-	for (int i = 0; i < cont; i++) {
-		// Retorna um dos argumentos do tipo especificado ...
-		// ... e aponta para o próximo argumento
-		int num = va_arg(args, int);
-		soma += num;
-	}
-
-	// Finaliza a lista de argumentos
-	va_end(args);
-
-	return soma;
-}
-
-void teste(int cont, ...) {
-	va_list args;
-	va_start(args, cont);
-
-	int arg0 = va_arg(args, int);
-	printf("(int)    Arg0: %d\n", arg0);
-
-	double arg1 = va_arg(args, double);
-	printf("(double) Arg1: %3lf\n", arg1);
-
-	char* arg2 = va_arg(args, char*);
-	printf("(char*)  Arg2: %s\n", arg2);
-
-	va_end(args);
-}
-
 void print(char* string, ...) {
 	va_list args;
 	va_start(args, string);
@@ -119,12 +75,8 @@ void print(char* string, ...) {
 
 
 int main() {
-	// printf("Soma: %d\n", sum(3, 1, 1, 1));
-	// teste(3, 1, 3.14, "Olá, mundo!");
 	print("oi +d +f +lf +c ", 1, 2.0, -3.14+1, 'a');
-	print("*s", "Olá, mundo!");
-	// printf("\n\noi\n", 4);
-	
+	print("+s", "Olá, mundo!\n");
 
 	return 0;
 }
