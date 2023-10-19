@@ -2,7 +2,7 @@
 // #include <vector>
 // #include <string>
 // ...
-// #include <bits/stdc++.h>
+// #include <bits/stdc++.h> - Conjunto de várias bibliotecas
 
 // using namespace std;
 
