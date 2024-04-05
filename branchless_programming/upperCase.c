@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 #define N 100
 
 
 void toUpper(char* txt) {
-	int tam = strlen(txt);
+	char* p = txt;
 
-	for (int i = 0; i < tam; i++) {
-		txt[i] -= 32 * (txt[i] >= 'a' && txt[i] <= 'z');
+	while (*txt) {
+		*txt -= 32 * (*txt >= 'a' && *txt <= 'z');
+		txt++;
 	}
 	
-	printf("%s\n", txt);
+	printf("%s\n", p);
 }
 
 
