@@ -10,7 +10,7 @@ int main() {
 	} y;
 
 	// error: ‘struct s’ has no member named ‘a’
-	// x->a = 1;
+	//x->a = 1;
 	x->b = 2;
 }
 

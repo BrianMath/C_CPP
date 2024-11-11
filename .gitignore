@@ -1,6 +1,8 @@
-# Arquivos executáveis
-main
-main.exe
+# Arquivos executáveis sem extensão ou exe
+*
+!*.*
+*.exe
+!*/
 
 # Configurações do VS Code
 .vscode/
